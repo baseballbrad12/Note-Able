@@ -16,11 +16,11 @@ module.exports = (app) => {
     });
 
     app.post("/api/notes", (req, res) => {
-        const newReq = req.body;
+        const addReq = req.body;
         id.noteID += 1;
-        newReq.id = id.noteID;
-        db.push(newReq);
-        res.json(newReq);
+        addReq.id = id.noteID;
+        db.push(addReq);
+        res.json(addReq);
         notesID()
         notes();
         ;
